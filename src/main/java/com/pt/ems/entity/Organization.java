@@ -20,15 +20,15 @@ public class Organization {
 	private String orgName;
 	@Column(name = "orgLoc")
 	private String orgLoc;
-
+	
 	@Column(name = "createdBy")
 	private String createdBy;
 	@Column(name = "createdDate")
-	private Date createdDate;
+	private Date createdDate = new Date();
 	@Column(name = "modifiedBy")
 	private String modifiedBy;
 	@Column(name = "modifiedDate")
-	private Date modifiedDate;
+	private Date modifiedDate = new Date();
 
 	public long getOrgId() {
 		return orgId;

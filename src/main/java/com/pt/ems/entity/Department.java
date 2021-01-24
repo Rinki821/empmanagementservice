@@ -11,24 +11,14 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "dept_table")
-public class Deparment {
+public class Department {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long deptId;
-	
-	@Column(name="orgId")
+
+	@Column(name = "orgId")
 	private long orgId;
-
-	
-	public long getOrgId() {
-		return orgId;
-	}
-
-	public void setOrgId(long orgId) {
-		this.orgId = orgId;
-	}
-
 	@Column(name = "deptName")
 	private String deptName;
 	@Column(name = "deptType")
@@ -95,6 +85,14 @@ public class Deparment {
 		return modifiedDate;
 	}
 
+	public long getOrgId() {
+		return orgId;
+	}
+
+	public void setOrgId(long orgId) {
+		this.orgId = orgId;
+	}
+
 	public void setModifiedDate(Date modifiedDate) {
 		this.modifiedDate = modifiedDate;
 	}
@@ -122,7 +120,7 @@ public class Deparment {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Deparment other = (Deparment) obj;
+		Department other = (Department) obj;
 		if (createdBy == null) {
 			if (other.createdBy != null)
 				return false;
